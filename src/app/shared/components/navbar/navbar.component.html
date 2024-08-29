@@ -1,0 +1,64 @@
+<div class="h-20 border-b shadow-md">
+    <div class="h-1 bg-blue-700"></div>
+    <nav class="container mx-auto w-full max-w-screen-xl px-4">
+        <div class="flex h-20 items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a
+                    routerLink="/"
+                    class="text-2xl font-extrabold uppercase tracking-wider"
+                    >Ticket<span class="text-blue-700">Hub</span></a
+                >
+
+                <ul class="flex items-center gap-10">
+                    <li>
+                        <a
+                            routerLink="/"
+                            class="font-semibold text-gray-700 hover:text-blue-700"
+                            >หน้าแรก</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            routerLink="/events"
+                            class="flex items-center gap-1 font-semibold text-gray-700 hover:text-blue-700"
+                            ><span>ทุกงานแสดง</span>
+                            <lucide-angular
+                                [img]="ChevronDownIcon"
+                                class="size-4"
+                            ></lucide-angular
+                        ></a>
+                    </li>
+                    <li>
+                        <a
+                            routerLink="/about"
+                            class="font-semibold text-gray-700 hover:text-blue-700"
+                            >สิทธิประโยชน์</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            routerLink="/contact"
+                            class="font-semibold text-gray-700 hover:text-blue-700"
+                            >ติดต่อเรา</a
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <!-- language selected -->
+            <div class="flex items-center gap-4">
+                <div class="flex gap-1 text-gray-700">
+                    <span class="font-bold text-blue-700">TH</span>
+                    <span>|</span>
+                    <span>ENG</span>
+                </div>
+
+                <button
+                    class="rounded-full bg-gradient-to-r from-blue-700 to-blue-500 px-5 py-2 font-medium text-white"
+                >
+                    เข้าสู่ระบบ
+                </button>
+            </div>
+        </div>
+    </nav>
+</div>

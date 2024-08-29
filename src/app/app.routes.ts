@@ -1,3 +1,24 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    {
+        path: '',
+        loadComponent: () =>
+            import('./features/index/pages/index.component').then(
+                (module) => module.IndexComponent,
+            ),
+        title: 'TICKETHUB: ซื้อบัตรคอนเสิร์ต งานแสดง โชว์ กิจกรรม',
+    },
+    {
+        path: 'not-found',
+        loadComponent: () =>
+            import(
+                './features/errors/not-found/pages/not-found.component'
+            ).then((module) => module.NotFoundComponent),
+        title: 'TICKETHUB | Not Found',
+    },
+    {
+        path: '**',
+        redirectTo: 'not-found',
+    },
+];
