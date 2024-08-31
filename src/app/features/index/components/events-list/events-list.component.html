@@ -1,0 +1,84 @@
+<div class="p-4">
+    <div class="w-full border-b">
+        <app-container>
+            <!-- tabs to select the view -->
+
+            <div class="flex h-12 items-center gap-10 lg:h-16 lg:gap-14">
+                @for (tab of tabsList; track $index) {
+                    <div class="relative flex h-full">
+                        <button
+                            class="tab"
+                            [ngClass]="{
+                                active: activeTab === tab.key,
+                            }"
+                            (click)="setActiveTab(tab.key)"
+                        >
+                            @if (tab.key === "HOT") {
+                                <lucide-angular
+                                    [img]="FlameIcon"
+                                    class="hot-icon mr-2 size-6"
+                                ></lucide-angular>
+                            } @else {
+                                <lucide-angular
+                                    [img]="CalendarIcon"
+                                    class="calendar-icon mr-2 size-6"
+                                ></lucide-angular>
+                            }
+
+                            {{ tab.value }}
+                        </button>
+                    </div>
+                }
+            </div>
+        </app-container>
+    </div>
+
+    <!-- Cards list -->
+    <app-container>
+        <div
+            class="opacity-0 transition-opacity duration-200"
+            [ngClass]="{
+                hidden: activeTab !== 'HOT',
+                'opacity-100': activeTab === 'HOT',
+            }"
+        >
+            <div
+                class="my-8 grid grid-cols-3 gap-3 md:grid-cols-4 md:gap-6 lg:grid-cols-6 lg:gap-8"
+            >
+                @for (event of hotEvents; track $index) {
+                    <app-event-card
+                        [event]="event"
+                        [isHot]="activeTab === 'HOT'"
+                    ></app-event-card>
+                }
+            </div>
+        </div>
+        <div
+            class="opacity-0 transition-opacity duration-200"
+            [ngClass]="{
+                hidden: activeTab !== 'SOON',
+                'opacity-100': activeTab === 'SOON',
+            }"
+        >
+            <div
+                class="my-8 grid grid-cols-3 gap-3 md:grid-cols-4 md:gap-6 lg:grid-cols-6 lg:gap-8"
+            >
+                @for (event of soonEvents; track $index) {
+                    <app-event-card
+                        [event]="event"
+                        [isHot]="activeTab === 'SOON'"
+                    ></app-event-card>
+                }
+            </div>
+        </div>
+
+        <!-- Vill All Events Button -->
+        <div class="flex justify-center">
+            <button
+                class="rounded-full border-2 bg-black px-6 py-1 uppercase text-white transition-opacity hover:opacity-80"
+            >
+                <a [href]="'/all-events/'">View All Events</a>
+            </button>
+        </div>
+    </app-container>
+</div>

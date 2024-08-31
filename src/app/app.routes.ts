@@ -10,15 +10,11 @@ export const routes: Routes = [
         title: 'TICKETHUB: ซื้อบัตรคอนเสิร์ต งานแสดง โชว์ กิจกรรม',
     },
     {
-        path: 'not-found',
+        path: '**',
         loadComponent: () =>
             import(
                 './features/errors/not-found/pages/not-found.component'
             ).then((module) => module.NotFoundComponent),
         title: 'TICKETHUB | Not Found',
-    },
-    {
-        path: '**',
-        redirectTo: 'not-found',
     },
 ];

@@ -1,11 +1,12 @@
 import { NgClass } from '@angular/common';
 import { AfterViewInit, Component, NgZone } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ContainerComponent } from '../../../../shared/components/container/container.component';
 
 @Component({
     selector: 'app-carousel',
     standalone: true,
-    imports: [NgClass, RouterLink],
+    imports: [NgClass, RouterLink, ContainerComponent],
     templateUrl: './carousel.component.html',
     styleUrl: './carousel.component.scss',
 })
@@ -40,7 +41,6 @@ export class CarouselComponent implements AfterViewInit {
     intervalId: NodeJS.Timeout | undefined;
 
     ngAfterViewInit(): void {
-        // Using requestAnimationFrame ensures the page renders before starting the loo
         setTimeout(() => {
             this.autoLoop();
         }, 500); // Short delay before starting the auto-loop
@@ -62,7 +62,7 @@ export class CarouselComponent implements AfterViewInit {
     setCurrentSlide(index: number): void {
         this.currentSlide = index;
 
-        // reset the auto loop
+        // reset the auto loop delay
         clearInterval(this.intervalId);
         this.autoLoop();
     }
