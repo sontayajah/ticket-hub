@@ -1,0 +1,62 @@
+.event-billboard {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.event-detail-bg-img {
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-image: url("https://www.thaiticketmajor.com/img_poster/prefix_1/0049/6049/knock-knock-knock-bus-1st-thailand-fancon-tour-66d2c5d931827-l.jpg");
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+    filter: brightness(70%) blur(10px);
+}
+
+.title {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.event-detail::before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: -50vw;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+    height: 100%;
+    display: block;
+    width: 150vw;
+}
+
+.breadcrumb {
+    .item:not(:first-child):before {
+        content: ">";
+        margin: 0 10px;
+    }
+
+    .item:hover {
+        opacity: 0.8;
+    }
+}
+
+@media (min-width: 1024px) {
+    .event-detail::before {
+        background-color: black;
+        opacity: 0.6;
+    }
+}

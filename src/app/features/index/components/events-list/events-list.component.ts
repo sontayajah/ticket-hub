@@ -61,7 +61,7 @@ export class EventsListComponent {
                 'Khon Kaen / Korat / Hat Yai, Songkhla / Si Racha, Chonburi / Chiang Mai',
             status: 3,
             bookingLink: '',
-            detailLink: 'concert/bus-1st-thailand-fancon-tour-2024-en.html',
+            detailLink: 'concert/bus-1st-thailand-fancon-tour-2024-en',
         },
         {
             id: 2,
@@ -73,7 +73,7 @@ export class EventsListComponent {
             status: 2,
             bookingLink: 'booking/3m/zones.php?query=489',
             detailLink:
-                'concert/stray-kids-world-tour-dominate-bangkok-2024-en.html',
+                'concert/stray-kids-world-tour-dominate-bangkok-2024-en',
         },
         {
             id: 3,
@@ -84,7 +84,7 @@ export class EventsListComponent {
             location: 'Impact Arena, Muang Thong Thani',
             status: 1,
             bookingLink: 'booking/3m/zones.php?query=490',
-            detailLink: 'concert/2024-yugyeom-tour-trusty-in-bangkok-en.html',
+            detailLink: 'concert/2024-yugyeom-tour-trusty-in-bangkok-en',
         },
         {
             id: 4,
@@ -95,8 +95,7 @@ export class EventsListComponent {
             location: 'Impact Arena, Muang Thong Thani',
             status: 1,
             bookingLink: '',
-            detailLink:
-                'concert/best-of-fujii-kaze-2020-2024-asia-tour-en.html',
+            detailLink: 'concert/best-of-fujii-kaze-2020-2024-asia-tour-en',
         },
         {
             id: 5,
@@ -108,7 +107,7 @@ export class EventsListComponent {
             status: 2,
             bookingLink: 'booking/3m/zones.php?query=320',
             detailLink:
-                'concert/bangkoks-26th-international-festival-of-dance-and-music-en.html',
+                'concert/bangkoks-26th-international-festival-of-dance-and-music-en',
         },
         {
             id: 6,
@@ -119,7 +118,7 @@ export class EventsListComponent {
             location: 'IMPACT Forum Hall 4',
             status: 1,
             bookingLink: '',
-            detailLink: 'concert/aee-asia-entertainment-expo-2024-en.html',
+            detailLink: 'concert/aee-asia-entertainment-expo-2024-en',
         },
     ];
 
