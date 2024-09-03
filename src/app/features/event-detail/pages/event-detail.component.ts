@@ -1,29 +1,12 @@
 import { Component } from '@angular/core';
-import { ContainerComponent } from '../../../shared/components/container/container.component';
-import {
-    CalendarCheck2Icon,
-    CalendarIcon,
-    CircleDollarSignIcon,
-    ClockIcon,
-    FlameIcon,
-    LucideAngularModule,
-    MapPinIcon,
-    TicketsIcon,
-} from 'lucide-angular';
+import { EventDetailBannerComponent } from '../components/event-detail-banner/event-detail-banner.component';
+import { EventDetailScheduleComponent } from '../components/event-detail-schedule/event-detail-schedule.component';
 
 @Component({
     selector: 'app-event-detail',
     standalone: true,
-    imports: [ContainerComponent, LucideAngularModule],
+    imports: [EventDetailBannerComponent, EventDetailScheduleComponent],
     templateUrl: './event-detail.component.html',
     styleUrl: './event-detail.component.scss',
 })
-export class EventDetailComponent {
-    readonly FlameIcon = FlameIcon;
-    readonly CalendarIcon = CalendarIcon;
-    readonly MapPinIcon = MapPinIcon;
-    readonly ClockIcon = ClockIcon;
-    readonly CalendarCheck2Icon = CalendarCheck2Icon;
-    readonly CircleDollarSignIcon = CircleDollarSignIcon;
-    readonly TicketsIcon = TicketsIcon;
-}
+export class EventDetailComponent {}
