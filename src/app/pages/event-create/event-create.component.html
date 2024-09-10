@@ -1,0 +1,241 @@
+<!-- <app-event-detail-banner
+    [title]="event.title"
+    [poster_url]="event.poster_url"
+    [type]="event.type"
+    [eventDate]="event.eventDate"
+    [location]="event.location"
+    [doorOpen]="event.doorOpen"
+    [publicSale]="event.publicSale"
+    [ticketPrice]="event.ticketPrice"
+    [ticketStatus]="event.ticketStatus"
+></app-event-detail-banner> -->
+
+<app-container>
+    <div class="mt-8">
+        <from [formGroup]="addEventForm">
+            <div class="event-detail">
+                <div class="detail-title my-4">
+                    <h1 class="text-2xl font-semibold">รายละเอียดกิจกรรม</h1>
+                </div>
+
+                <div class="banner-example py-2">
+                    <div class="h-full">
+                        <div class="mb-1">
+                            <label for="title" class="text-sm">
+                                รูปภาพ <span class="text-red-500">*</span>
+                            </label>
+                        </div>
+                        <div class="mx-auto w-[200px]">
+                            <img
+                                src="https://placehold.co/300x420"
+                                alt="event-detail-img"
+                                class="h-full rounded-md"
+                                name="poster"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-title py-2">
+                    <div class="mb-1">
+                        <label for="title" class="text-sm">
+                            ชื่อกิจกรรม <span class="text-red-500">*</span>
+                        </label>
+                    </div>
+                    <textarea
+                        type="text"
+                        id="title"
+                        class="h-full w-full rounded-md border p-4"
+                        placeholder="กรุณากรอกชื่อกิจกรรม"
+                        formControlName="title"
+                        style="resize: none"
+                        rows="2"
+                    ></textarea>
+                </div>
+
+                <div class="input-type py-2">
+                    <div class="mb-1">
+                        <label for="type" class="text-sm">
+                            ประเภทกิจกรรม <span class="text-red-500">*</span>
+                        </label>
+                    </div>
+                    <select
+                        id="type"
+                        class="w-full rounded-md border p-3"
+                        formControlName="type"
+                    >
+                        <option value="" disabled selected hidden>
+                            เลือกประเภทกิจกรรม
+                        </option>
+                        <option value="1">คอนเสิร์ต</option>
+                        <option value="2">นิทรรศการ</option>
+                        <option value="2">งานแสดง</option>
+                    </select>
+                </div>
+
+                <div class="input-location py-2">
+                    <div class="mb-1">
+                        <label for="title" class="text-sm">
+                            สถานที่ <span class="text-red-500">*</span>
+                        </label>
+                    </div>
+                    <input
+                        type="text"
+                        id="location"
+                        class="h-full w-full rounded-md border p-3"
+                        placeholder="กรุณากรอกสถานที่"
+                        formControlName="location"
+                    />
+                </div>
+
+                <div class="input-date py-3">
+                    <div class="flex gap-4">
+                        <div class="input-date-from flex-grow">
+                            <div class="mb-1">
+                                <label for="date" class="text-sm">
+                                    วันเริ่มต้นขายบัตร
+                                    <span class="text-red-500">*</span>
+                                </label>
+                            </div>
+                            <input
+                                type="date"
+                                id="date"
+                                class="w-full rounded-md border p-3"
+                                formControlName="publicSale"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-ticket-price py-2">
+                    <div class="flex items-end gap-4">
+                        <div class="ticket-price flex-grow">
+                            <div class="mb-1">
+                                <label for="ticketPrice" class="text-sm">
+                                    ราคาบัตร <span class="text-red-500">*</span>
+                                </label>
+                            </div>
+                            <input
+                                type="number"
+                                id="ticketPrice"
+                                class="w-full rounded-md border p-3"
+                                placeholder="กรุณากรอกราคาบัตร"
+                                formControlName="ticketPrice"
+                            />
+                        </div>
+                        <div class="ticket-name flex-grow">
+                            <div class="mb-1">
+                                <label for="ticketPrice" class="text-sm">
+                                    ชื่อราคาบัตร (ถ้ามี)
+                                </label>
+                            </div>
+                            <input
+                                type="text"
+                                id="ticketPriceName"
+                                class="w-full rounded-md border p-3"
+                                placeholder="กรุณากรอกชื่อราคาบัตร (ถ้ามี) เช่น VIP"
+                                formControlName="ticketPriceName"
+                            />
+                        </div>
+                        <div class="ticket-add">
+                            <button
+                                class="rounded-md bg-blue-700 px-3 py-2 text-white"
+                            >
+                                เพิ่มราคาบัตร
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-door-open py-2">
+                    <div class="mb-1">
+                        <label for="doorOpen" class="text-sm">
+                            เวลาเปิดประตูเข้างาน (ชั่วโมง)
+                            <span class="text-red-500">*</span>
+                        </label>
+                    </div>
+                    <input
+                        type="number"
+                        id="doorOpen"
+                        class="w-full rounded-md border p-3"
+                        formControlName="doorOpen"
+                        min="1"
+                    />
+                </div>
+            </div>
+
+            <div class="event-schedule">
+                <div class="schedule-title mb-4 mt-8">
+                    <div class="flex items-center justify-between">
+                        <h1 class="text-2xl font-semibold">รอบการแสดง</h1>
+                        <button
+                            class="rounded-md bg-blue-700 px-3 py-2 text-white"
+                        >
+                            เพิ่มรอบการแสดง
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input-schedule py-2">
+                    <!-- <div class="mb-1">
+                        <label for="schedule" class="text-sm">
+                            รอบการแสดง <span class="text-red-500">*</span>
+                        </label>
+                    </div>
+                    <input
+                        type="text"
+                        id="schedule"
+                        class="w-full rounded-md border p-3"
+                        placeholder="กรุณากรอกรอบการแสดง"
+                        formControlName="schedule"
+                    /> -->
+                    @if (
+                        addEventForm.get("eventSchedule")?.value.length === 0
+                    ) {
+                        <div class="mb-4">
+                            <p class="text-center text-sm text-gray-500">
+                                ไม่มีรอบการแสดง
+                            </p>
+                        </div>
+                    }
+                </div>
+            </div>
+            <!-- <div class="input-date py-3">
+                <div class="flex gap-4">
+                    <div class="input-date-from flex-grow">
+                        <div class="mb-1">
+                            <label for="date" class="text-sm">
+                                วันที่เริ่มต้น
+                                <span class="text-red-500">*</span>
+                            </label>
+                        </div>
+                        <input
+                            type="date"
+                            id="date"
+                            class="w-full rounded-md border p-2"
+                            formControlName="eventDateStart"
+                        />
+                    </div>
+
+                    <div class="input-date-to flex-grow">
+                        <div class="mb-1">
+                            <label for="date" class="text-sm">
+                                ถึงวันที่ <span class="text-red-500">*</span>
+                            </label>
+                        </div>
+                        <input
+                            type="date"
+                            id="date"
+                            class="w-full rounded-md border p-2"
+                            formControlName="eventDateEnd"
+                            [min]="
+                                addEventForm.get('eventDateStart')?.value ??
+                                null
+                            "
+                        />
+                    </div>
+                </div>
+            </div> -->
+        </from>
+    </div>
+</app-container>

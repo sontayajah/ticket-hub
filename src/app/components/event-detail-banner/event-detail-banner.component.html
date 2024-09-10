@@ -11,10 +11,11 @@
                 ><i>หน้าหลัก</i></a
             >
             <a href="/" class="item text-xs text-white opacity-60"
-                ><i>คอนเสิร์ต</i></a
+                ><i>{{ type }}</i></a
             >
             <span class="item text-xs text-white opacity-60">
-                Knock Knock Knock :BUS 1st THAILAND FANCON TOUR
+                <!-- remove <br /> from title text -->
+                <i>{{ getBreadcrumbEventTitle() }}</i>
             </span>
         </div>
 
@@ -24,7 +25,7 @@
             >
                 <div class="relative h-full w-[240px] shadow-2xl lg:pb-4">
                     <img
-                        src="https://www.thaiticketmajor.com/img_poster/prefix_1/0049/6049/knock-knock-knock-bus-1st-thailand-fancon-tour-66d2c5d931827-l.jpg"
+                        src="assets/img-posters/{{ poster_url }}"
                         alt="event-detail-img"
                         class="h-full rounded-md shadow-2xl"
                     />
@@ -35,15 +36,13 @@
                 <div class="flex flex-grow flex-col">
                     <div class="event-name z-10">
                         <div class="my-4 text-sm text-[#eee] opacity-60">
-                            <p>คอนเสิร์ต</p>
+                            <p>{{ type }}</p>
                         </div>
                         <div class="my-4">
                             <h1
                                 class="title text-xl font-semibold text-white lg:text-4xl"
-                            >
-                                Knock Knock Knock : <br />BUS 1st THAILAND
-                                FANCON TOUR
-                            </h1>
+                                [innerHTML]="title"
+                            ></h1>
                         </div>
                     </div>
                     <div class="relative h-full">
@@ -65,8 +64,7 @@
                                         <p
                                             class="text-sm font-medium text-white"
                                         >
-                                            วันอาทิตย์ที่ 29 กันยายน 2567 -
-                                            วันอาทิตย์ที่ 27 ตุลาคม 2567
+                                            {{ eventDate }}
                                         </p>
                                     </div>
                                 </div>
@@ -84,8 +82,7 @@
                                         <p
                                             class="text-sm font-medium text-white"
                                         >
-                                            ขอนแก่น / โคราช / สงขลา (หาดใหญ่) /
-                                            ชลบุรี (ศรีราชา) / เชียงใหม่
+                                            {{ location }}
                                         </p>
                                     </div>
                                 </div>
@@ -103,7 +100,10 @@
                                         <p
                                             class="text-sm font-medium text-white"
                                         >
-                                            ก่อนการแสดงเริ่มประมาณ 1 ชั่วโมง
+                                            @if (doorOpen !== 0) {
+                                                ก่อนการแสดงเริ่มประมาณ
+                                                {{ doorOpen }} ชั่วโมง
+                                            }
                                         </p>
                                     </div>
                                 </div>
@@ -125,8 +125,7 @@
                                         <p
                                             class="text-sm font-medium text-white"
                                         >
-                                            วันเสาร์ที่ 31 สิงหาคม 2567, 10:00
-                                            น.
+                                            {{ publicSale }}
                                         </p>
                                     </div>
                                 </div>
@@ -144,9 +143,7 @@
                                         <p
                                             class="text-sm font-medium text-white"
                                         >
-                                            3,500 / 3,500 / 3,000 / 3,000 /
-                                            2,500 / 2,500 / 2,000 / 2,000 /
-                                            1,200 / 1,200
+                                            {{ ticketPrice }}
                                         </p>
                                     </div>
                                 </div>
@@ -161,11 +158,19 @@
                                         >
                                             Ticket Status
                                         </p>
-                                        <p
-                                            class="mt-[6px] rounded-[4px] border-[1px] border-[#ff1f1f] px-2 py-1 text-center text-xs uppercase text-[#ff1f1f]"
-                                        >
-                                            SOLD OUT
-                                        </p>
+                                        @if (ticketStatus === 1) {
+                                            <p
+                                                class="mt-[6px] rounded-[4px] border-[1px] border-[#32af00] px-2 py-1 text-center text-xs uppercase text-[#32af00]"
+                                            >
+                                                ON SALE NOW
+                                            </p>
+                                        } @else if (ticketStatus === 2) {
+                                            <p
+                                                class="mt-[6px] rounded-[4px] border-[1px] border-[#ff1f1f] px-2 py-1 text-center text-xs uppercase text-[#ff1f1f]"
+                                            >
+                                                SOLD OUT
+                                            </p>
+                                        }
                                     </div>
                                 </div>
                             </div>

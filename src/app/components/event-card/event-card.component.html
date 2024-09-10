@@ -64,19 +64,19 @@
     <!-- Card Event Button -->
     @if (event.status === 1 && activeTab == "HOT") {
         <button
-            class="mt-4 block w-full rounded-full border-2 border-blue-700 py-1 text-center font-semibold uppercase text-blue-700 transition-opacity hover:opacity-80"
+            class="mt-4 block w-full rounded-full border-2 border-blue-700 py-1 text-center text-xs font-semibold uppercase text-blue-700 transition-opacity hover:opacity-80 md:text-base"
         >
             <a [href]="event.detailLink">Coming Soon</a>
         </button>
     } @else if (event.status === 2 && activeTab == "HOT") {
         <button
-            class="mt-4 block w-full rounded-full border-2 bg-gradient-to-r from-blue-700 to-blue-400 py-1 text-center font-semibold uppercase text-white transition-opacity hover:opacity-80"
+            class="mt-4 block w-full rounded-full border-2 bg-gradient-to-r from-blue-700 to-blue-400 py-1 text-center text-xs font-semibold uppercase text-white transition-opacity hover:opacity-80 md:text-base"
         >
             <a [href]="event.bookingLink">Buy Now</a>
         </button>
     } @else if (event.status === 3 && activeTab == "HOT") {
         <button
-            class="mt-4 block w-full cursor-not-allowed rounded-full border-2 bg-gray-400 py-1 text-center font-semibold uppercase text-white transition-opacity"
+            class="mt-4 block w-full cursor-not-allowed rounded-full border-2 bg-gray-400 py-1 text-center text-xs font-semibold uppercase text-white transition-opacity md:text-base"
             [disabled]="true"
         >
             SOLD OUT

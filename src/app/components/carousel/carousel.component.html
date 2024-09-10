@@ -1,7 +1,26 @@
-<div class="mt-8 bg-black/90">
+<div class="relative">
+    <div class="carousel-bg">
+        <div class="carousel-bg-img">
+            @for (item of carouselItems; track $index) {
+                <div
+                    class="absolute -left-10 right-20 top-0 z-[1] h-full w-[calc(100%+80px)] opacity-0 transition-opacity duration-1000"
+                    [ngClass]="{
+                        show: currentSlide === $index,
+                    }"
+                >
+                    <img
+                        [src]="item.imageUrl"
+                        [alt]="item.title"
+                        class="h-full w-full object-cover object-top"
+                    />
+                </div>
+            }
+        </div>
+    </div>
+
     <app-container>
-        <div class="max-w-[1140px] py-4">
-            <div class="relative mx-auto lg:w-[calc(100%-300px)]">
+        <div class="max-w-[1140px] py-8">
+            <div class="relative mx-auto lg:w-[calc(100%-200px)]">
                 <div class="relative z-10 pb-[45%]">
                     @for (item of carouselItems; track $index) {
                         <div
@@ -20,10 +39,12 @@
                         </div>
                     }
                 </div>
-                <div class="absolute bottom-3 z-10 mx-auto w-full text-center">
+                <div
+                    class="absolute bottom-1 z-10 mx-auto w-full text-center md:bottom-3"
+                >
                     @for (item of carouselItems; track $index) {
                         <div
-                            class="mx-1 inline-block size-2 cursor-pointer rounded-full bg-white transition-all"
+                            class="mx-1 inline-block h-1 w-6 cursor-pointer rounded-full bg-white transition-all"
                             [ngClass]="{
                                 'dot-active': currentSlide === $index,
                             }"

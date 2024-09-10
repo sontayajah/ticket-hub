@@ -7,3 +7,24 @@
     --tw-bg-opacity: 1;
     background-color: rgb(29 78 216 / var(--tw-bg-opacity)) /* #1d4ed8 */;
 }
+
+.carousel-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.carousel-bg-img {
+    background-size: cover;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+    filter: brightness(70%) blur(30px);
+}

@@ -1,4 +1,14 @@
 <div class="md:mt-8">
-    <app-event-detail-banner></app-event-detail-banner>
+    <app-event-detail-banner
+        [title]="event.title"
+        [poster_url]="event.poster_url"
+        [type]="event.type"
+        [eventDate]="event.eventDate"
+        [location]="event.location"
+        [doorOpen]="event.doorOpen"
+        [publicSale]="event.publicSale"
+        [ticketPrice]="event.ticketPrice"
+        [ticketStatus]="event.ticketStatus"
+    ></app-event-detail-banner>
     <app-event-detail-schedule></app-event-detail-schedule>
 </div>
