@@ -1,166 +1,155 @@
-<div class="fixed inset-0 top-[80px] z-[0] bg-[#111]"></div>
-<div class="relative">
-    <app-event-seating-banner></app-event-seating-banner>
-    <div class="z-[10] bg-black py-4 text-white">
-        <app-container>
-            <div class="overflow-x-auto">
-                <div class="m-4">
-                    <p class="text-center opacity-60">
-                        กรุณาเลือกโซนที่ต้องการซื้อบัตร
-                    </p>
-                </div>
+<app-event-seating-banner></app-event-seating-banner>
+<div class="z-[10] bg-black py-4 text-white">
+    <app-container>
+        <div class="overflow-x-auto">
+            <div class="m-4">
+                <p class="text-center opacity-60">
+                    กรุณาเลือกโซนที่ต้องการซื้อบัตร
+                </p>
+            </div>
 
+            <div
+                class="mx-auto h-[300px] max-w-[1024px] sm:h-[400px] md:h-[470px] lg:h-full"
+            >
                 <div
-                    class="mx-auto h-[300px] max-w-[1024px] sm:h-[400px] md:h-[470px] lg:h-full"
+                    class="flex origin-top scale-[0.35] items-center justify-center sm:scale-[0.6] md:scale-[0.7] lg:scale-[1]"
                 >
-                    <div
-                        class="flex origin-top scale-[0.35] items-center justify-center sm:scale-[0.6] md:scale-[0.7] lg:scale-[1]"
-                    >
-                        <div class="select-zone whitespace-nowrap">
-                            <div class="zone-planning inline-block">
-                                <div class="h-[641px] w-[675px]">
-                                    <img
-                                        src="/assets/img-seat-plan/bus-knock-knock-fancon-sriracha-seating-plan.png"
-                                        alt="event seating plan"
-                                        class="h-full w-full"
-                                        usemap="#image-map"
-                                    />
-
-                                    <map name="image-map">
-                                        <area
-                                            target=""
-                                            alt="A1"
-                                            title="A1"
-                                            coords="89,143,113,142,115,400,11,399,13,189"
-                                            shape="poly"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="A2"
-                                            title="A2"
-                                            coords="142,127,298,129,297,277,255,321,253,331,312,388,312,401,126,401,125,142"
-                                            shape="poly"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="A3"
-                                            title="A3"
-                                            coords="380,127,534,128,550,140,549,401,367,402,363,392,425,332,425,323,379,277"
-                                            shape="poly"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="A4"
-                                            title="A4"
-                                            coords="565,144,587,141,667,191,667,403,563,399"
-                                            shape="poly"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="B1"
-                                            title="B1"
-                                            coords="11,413,105,466"
-                                            shape="rect"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="B2"
-                                            title="B2"
-                                            coords="105,465,148,413"
-                                            shape="rect"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="B3"
-                                            title="B3"
-                                            coords="159,413,331,466"
-                                            shape="rect"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="B4"
-                                            title="B4"
-                                            coords="347,414,519,465"
-                                            shape="rect"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="B5"
-                                            title="B5"
-                                            coords="531,413,573,464"
-                                            shape="rect"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="B6"
-                                            title="B6"
-                                            coords="573,414,667,465"
-                                            shape="rect"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="C1"
-                                            title="C1"
-                                            coords="11,479,148,626"
-                                            shape="rect"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="C2"
-                                            title="C2"
-                                            coords="158,478,330,479,331,522,259,521,259,584,159,585"
-                                            shape="poly"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="C3"
-                                            title="C3"
-                                            coords="349,479,517,480,519,583,421,584,423,521,349,521"
-                                            shape="poly"
-                                            class="cursor-pointer"
-                                        />
-                                        <area
-                                            target=""
-                                            alt="C4"
-                                            title="C4"
-                                            coords="530,478,670,628"
-                                            shape="rect"
-                                            class="cursor-pointer"
-                                        />
-                                    </map>
-                                </div>
-                            </div>
-                            <div
-                                class="zone-pricing mx-4 inline-block w-[280px]"
-                            >
+                    <div class="select-zone whitespace-nowrap">
+                        <div class="zone-planning inline-block">
+                            <div class="h-[641px] w-[675px]">
                                 <img
-                                    src="/assets/img-seat-pricing/bus-knock-knock-fancon-sriracha-seating-pricing.png"
-                                    alt="event seating pricing"
+                                    src="/assets/img-seat-plan/bus-knock-knock-fancon-sriracha-seating-plan.png"
+                                    alt="event seating plan"
                                     class="h-full w-full"
+                                    usemap="#image-map"
                                 />
+
+                                <map name="image-map">
+                                    <area
+                                        target=""
+                                        alt="A1"
+                                        title="A1"
+                                        coords="89,143,113,142,115,400,11,399,13,189"
+                                        shape="poly"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="A2"
+                                        title="A2"
+                                        coords="142,127,298,129,297,277,255,321,253,331,312,388,312,401,126,401,125,142"
+                                        shape="poly"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="A3"
+                                        title="A3"
+                                        coords="380,127,534,128,550,140,549,401,367,402,363,392,425,332,425,323,379,277"
+                                        shape="poly"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="A4"
+                                        title="A4"
+                                        coords="565,144,587,141,667,191,667,403,563,399"
+                                        shape="poly"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="B1"
+                                        title="B1"
+                                        coords="11,413,105,466"
+                                        shape="rect"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="B2"
+                                        title="B2"
+                                        coords="105,465,148,413"
+                                        shape="rect"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="B3"
+                                        title="B3"
+                                        coords="159,413,331,466"
+                                        shape="rect"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="B4"
+                                        title="B4"
+                                        coords="347,414,519,465"
+                                        shape="rect"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="B5"
+                                        title="B5"
+                                        coords="531,413,573,464"
+                                        shape="rect"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="B6"
+                                        title="B6"
+                                        coords="573,414,667,465"
+                                        shape="rect"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="C1"
+                                        title="C1"
+                                        coords="11,479,148,626"
+                                        shape="rect"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="C2"
+                                        title="C2"
+                                        coords="158,478,330,479,331,522,259,521,259,584,159,585"
+                                        shape="poly"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="C3"
+                                        title="C3"
+                                        coords="349,479,517,480,519,583,421,584,423,521,349,521"
+                                        shape="poly"
+                                        class="cursor-pointer"
+                                    />
+                                    <area
+                                        target=""
+                                        alt="C4"
+                                        title="C4"
+                                        coords="530,478,670,628"
+                                        shape="rect"
+                                        class="cursor-pointer"
+                                    />
+                                </map>
                             </div>
+                        </div>
+                        <div class="zone-pricing mx-4 inline-block w-[280px]">
+                            <img
+                                src="/assets/img-seat-pricing/bus-knock-knock-fancon-sriracha-seating-pricing.png"
+                                alt="event seating pricing"
+                                class="h-full w-full"
+                            />
                         </div>
                     </div>
                 </div>
             </div>
-        </app-container>
-    </div>
-    <div class="footer my-4 text-center">
-        <span class="text-center text-sm text-white">&copy; 2024 </span>
-        <span class="text-center text-sm text-[#eee] opacity-60"
-            >All Rights Reserved</span
-        >
-    </div>
+        </div>
+    </app-container>
 </div>
