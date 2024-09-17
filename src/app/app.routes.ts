@@ -18,6 +18,14 @@ export const routes: Routes = [
         title: 'TICKETHUB: ซื้อบัตรคอนเสิร์ต งานแสดง โชว์ กิจกรรม',
     },
     {
+        path: 'booking/zones',
+        loadComponent: () =>
+            import(
+                './pages/event-seating-zones/event-seating-zones.component'
+            ).then((module) => module.EventSeatingZonesComponent),
+        title: 'เลือกโซนที่นั่ง | TICKETHUB',
+    },
+    {
         path: 'organizer/event/create',
         loadComponent: () =>
             import('./pages/event-create/event-create.component').then(

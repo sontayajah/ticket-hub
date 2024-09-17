@@ -1,0 +1,77 @@
+<!-- background image -->
+<div class="relative">
+    <div class="absolute left-0 top-0 h-full w-full overflow-hidden">
+        <div class="background-img h-full w-full blur-[15px] brightness-[0.4]">
+            <div
+                class="absolute -left-10 -top-10 right-10 z-[1] h-[calc(100%+80px)] w-[calc(100%+80px)]"
+            >
+                <img
+                    src="/assets/img-posters/bus-knock-knock-fancon-sriracha.jpg"
+                    alt="event seating banner"
+                    class="h-full w-full object-cover"
+                />
+            </div>
+        </div>
+    </div>
+
+    <app-container>
+        <div class="relative z-10 mx-auto max-w-screen-md p-6">
+            <div class="flex gap-8">
+                <div
+                    class="h-full w-20 shrink-0 overflow-hidden rounded-md md:w-24"
+                >
+                    <img
+                        src="/assets/img-posters/bus-knock-knock-fancon-sriracha.jpg"
+                        alt="event seating banner"
+                        class="h-full w-full object-cover"
+                    />
+                </div>
+                <div class="banner-detail flex flex-col">
+                    <div class="my-1 shrink">
+                        <h1
+                            class="pb-1 text-xs text-[#eee] opacity-60 md:text-sm"
+                        >
+                            คอนเสิร์ต
+                        </h1>
+                        <p
+                            class="line-clamp-2 text-base font-semibold text-white md:text-lg"
+                        >
+                            Knock Knock Knock: BUS 1st THAILAND FANCON TOUR
+                        </p>
+                    </div>
+                    <div class="my-3 border-t border-[#eee] opacity-30"></div>
+                    <div class="flex items-end gap-4 md:items-center">
+                        <div
+                            class="flex grow flex-col md:flex-row md:items-center md:gap-4"
+                        >
+                            <h1
+                                class="shrink-0 pb-1 text-xs text-[#eee] opacity-60 md:text-sm"
+                            >
+                                รอบการแสดง
+                            </h1>
+                            <div class="selection-wrapper relative grow">
+                                <select
+                                    class="rd-selection-input w-full rounded-[4px] border border-white bg-transparent px-3 py-1.5 text-xs font-semibold text-white md:text-sm"
+                                >
+                                    <option value="1">
+                                        Sat 12 Oct 2024 18:00
+                                    </option>
+                                    <option value="2">
+                                        Sat 19 Oct 2024 18:00
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="seat-avaiable">
+                            <button
+                                class="rounded-[4px] bg-blue-700 px-4 py-2 text-sm font-semibold text-white"
+                            >
+                                ที่นั่งว่าง
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </app-container>
+</div>

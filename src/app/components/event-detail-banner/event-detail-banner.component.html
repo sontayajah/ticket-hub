@@ -6,28 +6,30 @@
 
     <app-container>
         <!-- Bread crumb -->
-        <div class="breadcrumb relative z-10 my-6">
-            <a href="/" class="item text-xs text-white opacity-60"
-                ><i>หน้าหลัก</i></a
-            >
-            <a href="/" class="item text-xs text-white opacity-60"
+        <div
+            class="breadcrumb relative z-10 my-3 text-[0.65rem] md:my-6 md:text-xs"
+        >
+            <a href="/" class="item text-white opacity-60"><i>หน้าหลัก</i></a>
+            <a href="/" class="item text-white opacity-60"
                 ><i>{{ type }}</i></a
             >
-            <span class="item text-xs text-white opacity-60">
+            <span class="item text-white opacity-60">
                 <!-- remove <br /> from title text -->
                 <i>{{ getBreadcrumbEventTitle() }}</i>
             </span>
         </div>
 
-        <div class="relative flex flex-col lg:mt-16 lg:flex-row">
+        <div class="relative mt-8 flex flex-col lg:mt-16 lg:flex-row">
             <div
-                class="z-10 mx-auto flex flex-shrink-0 flex-grow-0 basis-[240px]"
+                class="z-10 mx-auto flex flex-shrink-0 flex-grow-0 basis-[200px] md:basis-[240px]"
             >
-                <div class="relative h-full w-[240px] shadow-2xl lg:pb-4">
+                <div
+                    class="relative w-[200px] shadow-2xl md:h-full md:w-[240px] lg:pb-4"
+                >
                     <img
                         src="assets/img-posters/{{ poster_url }}"
                         alt="event-detail-img"
-                        class="h-full rounded-md shadow-2xl"
+                        class="rounded-md shadow-2xl md:h-full"
                     />
                 </div>
             </div>

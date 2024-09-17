@@ -19,12 +19,14 @@
 }
 
 .carousel-bg-img {
-    background-size: cover;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
-    position: absolute;
-    top: -20px;
-    left: -20px;
+    width: calc(100%);
+    height: calc(100%);
     z-index: 2;
-    filter: brightness(70%) blur(30px);
+    filter: brightness(70%) blur(5px);
+}
+
+@media (min-width: 768px) {
+    .carousel-bg-img {
+        filter: brightness(70%) blur(10px);
+    }
 }

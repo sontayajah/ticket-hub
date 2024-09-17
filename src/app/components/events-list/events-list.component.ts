@@ -57,7 +57,7 @@ export class EventsListComponent {
             location:
                 'Khon Kaen / Korat / Hat Yai, Songkhla / Si Racha, Chonburi / Chiang Mai',
             status: 2,
-            bookingLink: 'booking/zones.php?query=488',
+            bookingLink: 'booking/zones?evId=488&rdId=78889',
             detailLink: 'concert/bus-1st-thailand-fancon-tour-2024-en',
             publicSaleDate: '1 SEP 2024, 10:00',
             eventDate: '29 SEP 2024 - 27 OCT 2024',

@@ -1,0 +1,16 @@
+.rd-selection-input {
+    -webkit-appearance: none;
+    appearance: none;
+    background: url("https://booking.thaiticketmajor.com/assets/img/icon/arrow-down-white.svg")
+        right 10px top 50% / 12px auto no-repeat rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: 1px solid #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+
+    option {
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+        color: black;
+    }
+}

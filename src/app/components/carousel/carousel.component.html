@@ -21,7 +21,7 @@
     <app-container>
         <div class="max-w-[1140px] py-8">
             <div class="relative mx-auto lg:w-[calc(100%-200px)]">
-                <div class="relative z-10 pb-[45%]">
+                <div class="relative z-10 pb-[40%]">
                     @for (item of carouselItems; track $index) {
                         <div
                             class="absolute left-0 top-0 z-[1] h-full w-full opacity-0 transition-opacity duration-1000"
@@ -40,7 +40,7 @@
                     }
                 </div>
                 <div
-                    class="absolute bottom-1 z-10 mx-auto w-full text-center md:bottom-3"
+                    class="absolute bottom-[0.5] z-10 mx-auto w-full text-center md:bottom-2"
                 >
                     @for (item of carouselItems; track $index) {
                         <div
