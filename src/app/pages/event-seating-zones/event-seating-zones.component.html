@@ -32,6 +32,7 @@
                                         coords="89,143,113,142,115,400,11,399,13,189"
                                         shape="poly"
                                         class="cursor-pointer"
+                                        (click)="selectZone('A1')"
                                     />
                                     <area
                                         target=""
@@ -40,6 +41,7 @@
                                         coords="142,127,298,129,297,277,255,321,253,331,312,388,312,401,126,401,125,142"
                                         shape="poly"
                                         class="cursor-pointer"
+                                        (click)="selectZone('A2')"
                                     />
                                     <area
                                         target=""
@@ -48,6 +50,7 @@
                                         coords="380,127,534,128,550,140,549,401,367,402,363,392,425,332,425,323,379,277"
                                         shape="poly"
                                         class="cursor-pointer"
+                                        (click)="selectZone('A3')"
                                     />
                                     <area
                                         target=""
@@ -56,6 +59,7 @@
                                         coords="565,144,587,141,667,191,667,403,563,399"
                                         shape="poly"
                                         class="cursor-pointer"
+                                        (click)="selectZone('A4')"
                                     />
                                     <area
                                         target=""
@@ -153,3 +157,13 @@
         </div>
     </app-container>
 </div>
+
+@if (isZoneSelected()) {
+    <div class="fixed inset-0 z-50">
+        <div
+            class="fixed inset-0 z-[-1] bg-black/40"
+            (click)="clearZone()"
+        ></div>
+        <app-event-seating-selection></app-event-seating-selection>
+    </div>
+}
