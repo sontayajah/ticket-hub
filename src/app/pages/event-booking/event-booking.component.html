@@ -1,4 +1,5 @@
-<app-event-seating-banner></app-event-seating-banner>
+<app-event-booking-banner></app-event-booking-banner>
+
 <div class="z-[10] bg-black py-4 text-white">
     <app-container>
         <div class="overflow-x-auto">
@@ -159,11 +160,23 @@
 </div>
 
 @if (isZoneSelected()) {
-    <div class="fixed inset-0 z-50">
-        <div
-            class="fixed inset-0 z-[-1] bg-black/40"
-            (click)="clearZone()"
-        ></div>
-        <app-event-seating-selection></app-event-seating-selection>
+    <app-event-booking-selection></app-event-booking-selection>
+} @else {
+    <div class="w-full select-none border-b bg-slate-50 py-5">
+        <div class="container mx-auto px-4 lg:max-w-screen-2xl">
+            <h2
+                class="border-b bg-white px-10 py-4 text-center text-lg font-bold"
+            >
+                เลือกที่นั่ง
+            </h2>
+
+            <div class="mt-8">
+                <div class="flex flex-col items-center justify-center">
+                    <p class="text-center opacity-60">
+                        ยังไม่มีโซนที่เลือก กรุณาเลือกโซนที่ต้องการก่อน
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 }

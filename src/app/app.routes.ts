@@ -20,9 +20,9 @@ export const routes: Routes = [
     {
         path: 'booking/zones',
         loadComponent: () =>
-            import(
-                './pages/event-seating-zones/event-seating-zones.component'
-            ).then((module) => module.EventSeatingZonesComponent),
+            import('./pages/event-booking/event-booking.component').then(
+                (module) => module.EventBookingComponent,
+            ),
         title: 'เลือกโซนที่นั่ง | TICKETHUB',
     },
     {
